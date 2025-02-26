@@ -8,11 +8,29 @@ class Post:
     """
     A class used to represent post on Nitzagram
     """
-    def __init__(self): #TODO: add parameters
-        #TODO: write me!
-        pass
+    def __init__(self, username, location, description, likes_counter):
+        self.comments = []
+        self.likes_counter = likes_counter
+        self.description = description
+        self.location = location
+        self.username = username
 
-    def display(self):
+    def add_like(self):
+        self.likes_counter += 1
+
+    def add_comments(self, text):
+        self.comments.append(text)
+
+
+
+    def display(self, screen):
+        screen.blit(self.username)
+        screen.blit(self.location)
+        screen.blit(self.likes_counter)
+        screen.blit(self.description)
+        screen.blit(self.comments)
+
+
         """
         Display the Post image/Text, description, location, likes and comments
         on screen
@@ -48,6 +66,5 @@ class Post:
             position_index += 1
             if i >= NUM_OF_COMMENTS_TO_DISPLAY - 1:
                 break
-
 
 

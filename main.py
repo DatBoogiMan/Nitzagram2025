@@ -1,7 +1,11 @@
 import pygame
 from helpers import screen
 from constants import WINDOW_WIDTH, WINDOW_HEIGHT, BLACK
-
+from classes.Post import *
+from classes.ImagePost import *
+from classes.Text_post import *
+pygame.image.load("noa_kirel.jpg")
+image_post=Imagepost("noa_kirel.jpg","alon",(230,0),"ihdgghdf",8)
 
 def main():
     # Set up the game display, clock and headline
@@ -30,6 +34,7 @@ def main():
         # Display the background, presented Image, likes, comments, tags and location(on the Image)
         screen.fill(BLACK)
         screen.blit(background, (0, 0))
+        screen.blit(image_post)
 
         # Update display - without input update everything
         pygame.display.update()
