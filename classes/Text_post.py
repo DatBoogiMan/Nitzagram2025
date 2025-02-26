@@ -10,6 +10,7 @@ class Text_post(Post):
         self.text = text
 
     def display(self, screen):
+        pygame.transform.scale(POST_WIDTH,POST_HEIGHT)
         screen.blit(self.background_color)
         screen.blit(self.text)
         super(screen)

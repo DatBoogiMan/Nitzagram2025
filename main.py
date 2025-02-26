@@ -4,8 +4,8 @@ from constants import WINDOW_WIDTH, WINDOW_HEIGHT, BLACK
 from classes.Post import *
 from classes.ImagePost import *
 from classes.Text_post import *
-pygame.image.load("noa_kirel.jpg")
-image_post=Imagepost("noa_kirel.jpg","alon",(230,0),"ihdgghdf",8)
+pygame.image.load("classes/noa_kirel.jpg")
+image_post=Imagepost("classes/noa_kirel.jpg","alon",(230,0),"ihdgghdf",8)
 
 def main():
     # Set up the game display, clock and headline
